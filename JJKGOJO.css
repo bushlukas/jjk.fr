@@ -1,0 +1,256 @@
+/* Style global pour le corps */
+body {
+    font-family: "Kanit", sans-serif;
+}
+
+/* Titre principal */
+h1 {
+    color: #aacacf;
+    font-size: 5em;
+    background-color: #0b9bb5;
+    text-align: center;
+    background-image: url("fond1.PNG");
+    padding: 150px;
+    background-size: cover;
+}
+
+/* Sous-titre et titre de sections */
+h2, h3 {
+    font-size: 4em;
+    text-decoration: underline;
+    color: #333;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+p {
+    color: black;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    padding: 20px 0;
+    font-size: 1.6em; /* Ajustement pour la lisibilité */
+}
+
+.origine {
+    border: 4px solid #0b9bb5;
+    border-radius: 50px 20px 20px 50px;
+    box-shadow: 6px 6px 15px #056677;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+/* Couleurs spécifiques pour certains éléments */
+.gojo {
+    color: #0b9bb5;
+}
+
+.rouge {
+    color: #631406;
+}
+
+.bleu {
+    color: #0f3c69;
+}
+
+.violet {
+    color: #0f244f;
+}
+
+/* Styles pour le menu d'ancrage */
+.Mbox {
+    font-size: 2.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+/* Styles pour les sections */
+.box {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 3px solid black;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Styles pour la navigation */
+nav {
+    padding: 10px; /* Espace autour du contenu du nav */
+    background-color: #f9f9f9; /* Couleur de fond du nav */
+}
+
+nav a {
+    text-decoration: none; /* Enlève le soulignement */
+    color: #333; /* Couleur du texte */
+    padding: 5px 10px; /* Espace autour du texte */
+    position: relative; /* Nécessaire pour le pseudo-élément */
+    transition: color 0.3s ease; /* Transition douce pour la couleur du texte */
+}
+
+/* Ajout de séparateurs entre les liens */
+nav a:not(:last-child)::after {
+    content: '|'; /* Séparateur */
+    margin: 0 10px; /* Espace autour du séparateur */
+    color: #333; /* Couleur du séparateur */
+}
+
+/* Effet d'encadré */
+nav a::before {
+    content: ""; /* Nécessaire pour créer l'élément */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px; /* Ajustez si nécessaire pour aligner sous le texte */
+    height: 3px; /* Épaisseur de l'encadré */
+    background: #ff416c; /* Couleur de l'encadré */
+    transform: scaleX(0); /* Initialement invisible */
+    transition: transform 0.3s ease; /* Transition pour l'animation */
+}
+
+/* Animation d'encadré lors du survol */
+nav a:hover::before {
+    transform: scaleX(1); /* Montre l'encadré */
+}
+
+/* Optionnel : Style pour indiquer le lien actif */
+nav a:focus, nav a:hover {
+    color: #ff416c; /* Change la couleur du texte au survol ou au focus */
+}
+
+
+h5 {
+    color: #333;
+    font-size: 5em;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: color: #333;
+}
+
+
+
+/* Liens vers les réseaux sociaux */
+.youtube-link, .instagram-link, .tiktok-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.image-container {
+    display: flex;                   /* Utilise Flexbox pour le centrage */
+    justify-content: center;         /* Centre les éléments horizontalement */
+    align-items: center;             /* Centre les éléments verticalement (si nécessaire) */
+    gap: 20px;                       /* Espacement entre les images (optionnel) */
+    margin-top: 20px;               /* Marge en haut du conteneur */
+}
+
+.youtube-link img,
+.instagram-link img,
+.tiktok-link img {
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 10px;
+    display: block;                 /* Fait des images des éléments de bloc */
+    margin: 0 auto;                 /* Centre les images horizontalement */
+    margin-bottom: 10px;            /* Espacement entre les images */
+}
+
+/* Effet de survol pour les icônes de réseaux sociaux */
+.youtube-link:hover img, 
+.instagram-link:hover img, 
+.tiktok-link:hover img {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+.youtube-link::before, 
+.instagram-link::before, 
+.tiktok-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    padding: 3px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b, #ff416c);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    transition: transform 0.3s ease;
+}
+
+.youtube-link:hover::before, 
+.instagram-link:hover::before, 
+.tiktok-link:hover::before {
+    transform: scale(1.05);
+}
+
+
+footer {
+    display: flex;                  /* Utilise Flexbox pour le footer */
+    justify-content: center;        /* Centre les éléments horizontalement */
+    align-items: center;            /* Centre les éléments verticalement */
+    padding: 20px 0;               /* Ajoute un peu d'espace autour */
+    background-color: #f0f0f0;     /* Couleur de fond pour le footer (facultatif) */
+}
+
+footer a {
+    margin: 0 15px;                /* Espace entre les liens (ajustez si nécessaire) */
+}
+
+footer img {
+    width: 50px;                   /* Ajustez la taille des images si nécessaire */
+    height: auto;                  /* Conserve le ratio des images */
+}
+
+
+/* Styles pour l'affichage de l'image au survol du titre */
+.hover-image {
+    display: none; /* Masquer l'image par défaut */
+    width: 500px; /* Ajustez la largeur de l'image selon vos besoins */
+    margin-top: 10px; /* Espace entre le titre et l'image */
+}
+
+/* Affiche l'image au survol du titre */
+.hover-title:hover + .hover-image {
+    display: block; /* Affiche l'image */
+    transition: opacity 0.3s ease; /* Transition pour rendre l'apparition plus fluide */
+}
+
+/* Optionnel : ajouter une opacité pour un effet de fondu */
+.hover-image {
+    opacity: 0; /* Définir l'opacité à 0 */
+    transition: opacity 0.3s ease; /* Transition pour l'opacité */
+}
+
+.hover-title:hover + .hover-image {
+    display: block; /* Afficher l'image */
+    opacity: 1; /* Rendre l'image complètement visible */
+}
+
+/* image gojo à + */
+.gojoad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100;
+}
+
+.fond1 {
+   
+    font-size: 5em;
+    text-align: center;
+    background-image: url("fond1.PNG");
+    padding: 150px;
+    background-size: cover;
+}
